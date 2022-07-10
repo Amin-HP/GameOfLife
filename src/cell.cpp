@@ -65,3 +65,11 @@ void Cell::draw(){
 //    ofDrawBitmapString(ofToString(ID), x + 4, y + 14);
     
 }
+
+void Cell::setDeadColor(ofColor c){
+    deadColor = c;
+}
+
+void Cell::setLiveColor(ofColor c){
+    liveColor = c;
+}

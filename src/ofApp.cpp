@@ -104,8 +104,15 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::updateCells(){
 //    Generator frequency;
+    ofColor lc;
+    lc.setHsb(ofNoise(ofGetElapsedTimef() / 10) * 255, 250, 100);
+//    ofColor ld = ofColor(51,83,141);
+    ofColor ld = ofColor(90,135,220);
+    
     for (int i = 0; i < NCELLS; i++) {
         for (int j = 0; j < NCELLS; j++) {
+            cells[j][i].setDeadColor(ld);
+            cells[j][i].setLiveColor(lc);
 //            if(cells[j][i].isAlive)
 //                synth.setOutputGen(cells[j][i].tone);
 //            cout << endl <<cells[j][i].ID << "(" << cells[j][i].isAlive << ") ==============================" << endl;

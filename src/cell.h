@@ -18,6 +18,8 @@ public:
     void setup(int, int, int, float);
     void update();
     void draw();
+    void setDeadColor(ofColor c);
+    void setLiveColor(ofColor c);
 //    void setNeighbours(Cell *);
     int     ID;
     bool    isAlive;
